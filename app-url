@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tsuru app-info -"$@" | awk '/^Address:/ { print "http://" $2 }'
